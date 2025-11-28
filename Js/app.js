@@ -1,6 +1,7 @@
 // bizzhuss app.js — handles demo data, cart, favourites, search modal, and UI interactions
 (function(){
   const STORAGE = { CART: 'bizzhuss_cart_v1', FAV: 'bizzhuss_fav_v1' };
+  let _lastFocus = null;
 
   // --- Seed product dataset (12 items) ---
   const products = [
@@ -143,8 +144,8 @@
     document.getElementById('b-search-close').addEventListener('click', closeSearchModal);
     const input = document.getElementById('b-search-input'); if(input){ input.addEventListener('input', ()=>{ const q = input.value; const res = searchProducts(q); const target = document.getElementById('b-search-results'); if(!target) return; if(res.length===0) target.innerHTML = `<div class="small text-muted">No results</div>`; else target.innerHTML = `<div class="row g-3">${res.slice(0,8).map(p=>`<div class="col-12"><div class="d-flex gap-2 align-items-center p-2 rounded card-product"><img src="${p.images[0]}" alt="" width="64" height="64" style="object-fit:cover;border-radius:8px;"><div class="flex-grow-1"><div class="fw-semibold">${p.title}</div><div class="small text-muted">${p.category} • ${formatPrice(p.salePrice || p.price)}</div></div><a class="btn btn-sm btn-outline-secondary" href="product.html?slug=${p.slug}">View</a></div></div>`).join('')}</div>`; } ); input.addEventListener('keydown', e=>{ if(e.key === 'Enter'){ const q = input.value.trim(); window.location.href = `search.html?q=${encodeURIComponent(q)}`; }} ); }
   }
-  function openSearchModal(){ createSearchModal(); const el = document.getElementById('bizzhuss-search-modal'); if(!el) return; el.classList.add('show'); setTimeout(()=> document.getElementById('b-search-input')?.focus(), 60); }
-  function closeSearchModal(){ const el = document.getElementById('bizzhuss-search-modal'); if(!el) return; el.classList.remove('show'); }
+  function openSearchModal(){ _lastFocus = document.activeElement; createSearchModal(); const el = document.getElementById('bizzhuss-search-modal'); if(!el) return; el.classList.add('show'); setTimeout(()=> document.getElementById('b-search-input')?.focus(), 60); }
+  function closeSearchModal(){ const el = document.getElementById('bizzhuss-search-modal'); if(!el) return; el.classList.remove('show'); if(_lastFocus && typeof _lastFocus.focus === 'function') { try { _lastFocus.focus(); } catch (e) {} _lastFocus = null; } }
 
   // --- Track page stub ---
   function initTrackPage(){ const form = document.getElementById('track-form'); if(!form) return; form.addEventListener('submit', (ev)=>{ ev.preventDefault(); const id = document.getElementById('track-id').value.trim(); const statusEl = document.getElementById('track-status'); if(!id){ statusEl.innerHTML = `<div class="text-danger small">Enter a valid order ID</div>`; return; } const statuses = ['Processing','Shipped','In transit','Out for delivery','Delivered']; const idx = Math.floor(Math.random()*statuses.length); statusEl.innerHTML = `

@@ -10,22 +10,27 @@
 </head>
 <body>
   <header class="header-nav">
-    <div class="container-lg header-inner">
-      <a class="brand-logo text-decoration-none" href="index.html"><div class="logo-icon">B</div><span>bizzhuss</span></a>
-
-      <nav class="d-none d-md-flex gap-4 justify-content-center" aria-label="Primary">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About Us</a>
-        <a href="track.html" class="nav-link">Track Order</a>
-        <a href="account.html" class="nav-link">My Account</a>
-      </nav>
-
-      <div class="d-flex gap-2 align-items-center">
-        <button class="btn btn-link text-white nav-search-btn" aria-label="Search"><i class="bi bi-search fs-5"></i></button>
-        <a href="favourites.html" class="text-white ms-2" aria-label="Favourites"><i class="bi bi-heart fs-5"></i></a>
-        <a href="cart.html" class="text-white ms-2 position-relative" aria-label="Cart"><i class="bi bi-cart fs-5"></i><span class="badge bg-danger cart-count position-absolute top-0 start-100 translate-middle">0</span></a>
+    <nav class="navbar navbar-expand-md">
+      <div class="container-lg header-inner">
+        <a class="brand-logo navbar-brand text-decoration-none" href="index.html">Bizzhuss</a>
+        <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+          <ul class="navbar-nav mb-2 mb-md-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="track.html">Track Order</a></li>
+            <li class="nav-item"><a class="nav-link" href="account.html">My Account</a></li>
+          </ul>
+        </div>
+        <div class="d-flex gap-2 align-items-center ms-auto">
+          <button class="btn btn-link text-white nav-search-btn" aria-label="Search"><i class="bi bi-search fs-5"></i></button>
+          <a href="favourites.html" class="text-white ms-2" aria-label="Favourites"><i class="bi bi-heart fs-5"></i></a>
+          <a href="cart.html" class="text-white ms-2 position-relative" aria-label="Cart"><i class="bi bi-cart fs-5"></i><span class="badge bg-danger cart-count position-absolute top-0 start-100 translate-middle">0</span></a>
+        </div>
       </div>
-    </div>
+    </nav>
   </header>
 
   <main class="container-lg my-5 animate-on-scroll">
@@ -36,14 +41,14 @@
 
   <footer class="site-footer">
     <div class="container-lg">
-      <div class="footer-grid">
+      <div class="footer-grid py-3">
         <div>
-          <div class="brand-logo text-white mb-3"><div class="logo-icon" style="background:linear-gradient(90deg,rgba(255,255,255,0.12),rgba(255,255,255,0.03)); color:white;">B</div>bizzhuss</div>
-          <div class="small text-white mb-2">Your saved products and Wishlist — always here.</div>
+          <h5 class="text-white mb-2">About Us</h5>
+          <p class="small text-white-75 mb-0">bizzhuss builds thoughtfully designed everyday essentials — minimal, high-quality, and priced fairly. Demo storefront for UI showcase.</p>
         </div>
         <div>
-          <h6 class="mb-2">Quick links</h6>
-          <ul class="list-unstyled small mb-0">
+          <h5 class="text-white mb-2">Quick Links</h5>
+          <ul class="list-unstyled small mb-0 text-white-75">
             <li><a href="index.html">Home</a></li>
             <li><a href="search.html">Shop</a></li>
             <li><a href="cart.html">Cart</a></li>
@@ -51,14 +56,15 @@
           </ul>
         </div>
         <div>
-          <h6 class="mb-2">Contact</h6>
-          <div class="small mb-2">support@bizzhuss.example</div>
-          <div class="small">+1 (555) 123-4567</div>
+          <h5 class="text-white mb-2">Contact Info</h5>
+          <div class="small text-white-75">support@bizzhuss.example</div>
+          <div class="small text-white-75">+1 (555) 123-4567</div>
+          <div class="small text-white-75 mt-2">500 Commerce St, Suite 100<br>San Francisco, CA</div>
         </div>
       </div>
-      <div class="border-top pt-3 mt-3 d-flex justify-content-between">
-        <div class="small">© <strong>bizzhuss</strong> — Crafted with care</div>
-        <div class="small">Privacy • Terms • Cookies</div>
+      <div class="border-top pt-3 mt-3 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <div class="small text-white-50">© <strong>bizzhuss</strong> — Crafted with care</div>
+        <div class="small text-white-50">Privacy • Terms • Cookies</div>
       </div>
     </div>
   </footer>
