@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BizzHuss - Modern E-commerce</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">Get up to 50% off new season styles, limited time only</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="#" class="top-link">Help Center</a>
+                    <span class="mx-2">|</span>
+                    <a href="#" class="top-link">Order Tracking</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Middle Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">BizzHuss</a>
+            
+            <!-- Search Bar -->
+            <form class="search-form" style="flex: 1; margin: 0 20px; max-width: 500px;">
+                <div class="search-container">
+                    <input type="search" class="search-input" placeholder="Search for products...">
+                    <button type="submit" class="search-btn">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </form>
+
+            <div class="d-flex align-items-center">
+                <div class="nav-item dropdown me-4">
+                    <a class="nav-link dropdown-toggle" href="#" id="loginDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-person me-1"></i> Login | Register
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="loginDropdown">
+                        <li><a class="dropdown-item" href="#">Login</a></li>
+                        <li><a class="dropdown-item" href="#">Register</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">My Account</a></li>
+                        <li><a class="dropdown-item" href="#">My Orders</a></li>
+                    </ul>
+                </div>
+                <a href="#" class="nav-link me-4 wishlist-icon" title="Wishlist">
+                    <i class="bi bi-heart"></i>
+                </a>
+                <a href="#" class="nav-link cart-icon" title="Cart">
+                    <i class="bi bi-cart3"></i>
+                    <span class="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bottom Bar -->
+    <nav class="navbar navbar-expand-lg bottom-navbar">
+        <div class="container d-flex justify-content-between">
+            <button class="btn btn-primary categories-btn" type="button" style="background-color: #007bff; border-color: #007bff;">
+                <i class="bi bi-list me-2"></i>SHOP BY CATEGORIES
+            </button>
+            
+            <div class="navbar-content d-flex justify-content-center">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Fashion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Electronics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Bags</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Footwear</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Groceries</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Beauty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Wellness</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Jewellery</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="text-center py-5">
+            <h1>Welcome to BizzHuss</h1>
+            <p class="lead">Your one-stop shop for all your needs</p>
+        </div>
+    </main>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
